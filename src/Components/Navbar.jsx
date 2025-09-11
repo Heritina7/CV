@@ -33,8 +33,9 @@ export default function Navbar() {
       const section = document.querySelector(lien);
       if (section) observer.observe(section);
     });
+
     return () => observer.disconnect();
-  }, [NavLinks]);
+  }, []);
 
   // ✅ Gère l'ouverture/fermeture sur resize
   useEffect(() => {
@@ -100,7 +101,7 @@ export default function Navbar() {
           className="bg-black/50 rounded-full p-2 shadow-lg text-white text-lg hover:bg-black hover:scale-110 transition-transform duration-200">
           <FaTiktok />
         </a>
-        <a href="https://wa.me/123456789" target="_blank" rel="noreferrer"
+        <a href="https://wa.me/0347791758" target="_blank" rel="noreferrer"
           className="bg-green-500/50 rounded-full p-2 shadow-lg text-white text-lg hover:bg-green-400 hover:scale-110 transition-transform duration-200">
           <FaWhatsapp />
         </a>
