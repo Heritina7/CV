@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Boutons de navigation du carrousel */
+.slick-prev,
+.slick-next {
+  width: 50px;       /* largeur plus grande */
+  height: 1000px;      /* hauteur plus grande */
+  z-index: 50;       /* au-dessus des slides */
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 40px;      /* taille de l’icône */
+  color: #10B981 !important;  /* vert (ou autre couleur) */
+  opacity: 1 !important;      /* visible à 100% */
+}
+
+.slick-prev {
+  left: -25px;   /* décale à gauche */
+}
+
+.slick-next {
+  right: -25px;  /* décale à droite */
+}
+
