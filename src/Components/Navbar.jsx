@@ -33,9 +33,8 @@ export default function Navbar() {
       const section = document.querySelector(lien);
       if (section) observer.observe(section);
     });
-
     return () => observer.disconnect();
-  }, []);
+  }, [NavLinks]);
 
   // ✅ Gère l'ouverture/fermeture sur resize
   useEffect(() => {
