@@ -3,18 +3,19 @@ import { FaBars, FaGraduationCap, FaHome, FaProjectDiagram, FaInfoCircle, FaEnve
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
 
+// ✅ Définition des liens de navigation en dehors du composant
+const NavLinks = [
+  { nom: 'ACCUEIL', icon: <FaHome />, lien: '#accueil' },
+  { nom: 'SERVICE', icon: <FaGraduationCap />, lien: '#services' },
+  { nom: 'PORTFOLIO', icon: <FaProjectDiagram />, lien: '#portfolio' },
+  { nom: 'PROJET', icon: <FaProjectDiagram />, lien: '#projet' },
+  { nom: 'PROPOS', icon: <FaInfoCircle />, lien: '#propos' },
+  { nom: 'CONTACT', icon: <FaEnvelope />, lien: '#contact' }
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('ACCUEIL');
-
-  const NavLinks = [
-    { nom: 'ACCUEIL', icon: <FaHome />, lien: '#accueil' },
-    { nom: 'SERVICE', icon: <FaGraduationCap />, lien: '#services' },
-    { nom: 'PORTFOLIO', icon: <FaProjectDiagram />, lien: '#portfolio' },
-    { nom: 'PROJET', icon: <FaProjectDiagram />, lien: '#projet' },
-    { nom: 'PROPOS', icon: <FaInfoCircle />, lien: '#propos' },
-    { nom: 'CONTACT', icon: <FaEnvelope />, lien: '#contact' }
-  ];
 
   // ✅ Observer pour détecter la section visible
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, []); // ✅ Plus besoin de NavLinks en dépendance
 
   // ✅ Gère l'ouverture/fermeture sur resize
   useEffect(() => {
@@ -113,3 +114,4 @@ export default function Navbar() {
     </div>
   );
 }
+
