@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# Autoriser tous les moteurs de recherche à explorer le site
 User-agent: *
-Disallow:
+Allow: /
+
+# Lien vers le sitemap
+Sitemap: https://rtheritina.netlify.app/sitemap.xml

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { BsCart4 } from "react-icons/bs"; 
 import serviceIcon from "../Assets/icone/service.png";
 import Slider from "react-slick";
@@ -50,6 +51,20 @@ export default function Services() {
   return (
     <div className="w-full py-5 bg-gray-100">
       {/* Titre */}
+      <Helmet>
+        <title>Services | Portfolio RANDRIANJAFY Heritina</title>
+        <meta
+          name="description"
+          content="Découvrez les services proposés par RANDRIANJAFY Heritina : développement de sites web, applications web, e-commerce et solutions personnalisées."
+        />
+        <meta property="og:title" content="Services - RTH" />
+        <meta
+          property="og:description"
+          content="Services de développement web full stack avec React & Django pour vos projets modernes."
+        />
+        <meta property="og:image" content="https://rtheritina.netlify.app/assets/service.jpg" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="text-center lg:w-[40%] w-[70%] bg-green-500 ml-10 md:ml-32 mb-5 flex flex-row justify-center items-center rounded-r-full">
         <img
           src={serviceIcon}

@@ -1,12 +1,34 @@
+import { Helmet } from "react-helmet-async";
 import { FaHtml5, FaReact } from "react-icons/fa";
-import { SiDjango, SiTailwindcss, SiFiverr, SiFreelancer, SiCodeforces, SiMalt } from "react-icons/si"; 
+import { 
+  SiDjango, 
+  SiTailwindcss, 
+  SiFiverr, 
+  SiFreelancer, 
+  SiCodeforces, 
+  SiMalt 
+} from "react-icons/si"; 
 import pdp from '../Assets/pdp.jpg';
 
 export default function Home() {
   return (
     <div className="w-full h-full">
-      <div className="flex flex-col md:flex-row max-h-screen">
+     <Helmet>
+        <title>Accueil | Portfolio RANDRIANJAFY Heritina</title>
+        <meta
+          name="description"
+          content="Développeur Web Full Stack freelance spécialisé en React et Django. Découvrez mon portfolio et mes projets."
+        />
+        <meta property="og:title" content="Portfolio RANDRIANJAFY Heritina" />
+        <meta
+          property="og:description"
+          content="Je développe des sites modernes et performants avec React & Django."
+        />
+        <meta property="og:image" content="https://rtheritina.netlify.app/assets/pdp.jpg" />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
+      <div className="flex flex-col md:flex-row max-h-screen">
         {/* Partie gauche */}
         <div className="w-full md:w-1/2 h-auto md:h-screen text-lg font-semibold justify-center md:justify-end space-y-6 md:space-y-7 items-center flex flex-col p-6">
 
@@ -21,29 +43,27 @@ export default function Home() {
             </h1>
           </div>
 
-         <div className="bg-white shadow-[0_4px_15px_rgba(0,0,0,0.4)] md:p-5 rounded-full overflow-hidden w-full flex justify-center items-center">
-  <div className="flex space-x-10 text-6xl md:text-4xl animate-slide">
-    <FaHtml5 className="text-orange-500" />
-    <FaReact className="text-blue-400" />
-    <SiDjango className="text-green-700" />
-    <SiTailwindcss className="text-cyan-500" />
-    <SiMalt className="text-red-600" />
-    <SiFiverr className="text-green-500" />
-    <SiFreelancer className="text-blue-500" />
-    <SiCodeforces className="text-yellow-600" />
-  </div>
-</div>
-
+          <div className="bg-white shadow-[0_4px_15px_rgba(0,0,0,0.4)] md:p-5 rounded-full overflow-hidden w-full flex justify-center items-center">
+            <div className="flex space-x-10 text-6xl md:text-4xl animate-slide">
+              <FaHtml5 className="text-orange-500" />
+              <FaReact className="text-blue-400" />
+              <SiDjango className="text-green-700" />
+              <SiTailwindcss className="text-cyan-500" />
+              <SiMalt className="text-red-600" />
+              <SiFiverr className="text-green-500" />
+              <SiFreelancer className="text-blue-500" />
+              <SiCodeforces className="text-yellow-600" />
+            </div>
+          </div>
 
         </div>
 
         {/* Partie droite */}
         <div className="w-full md:w-1/2 pt-10 md:pt-28 flex flex-col space-y-6 md:space-y-10 items-center h-auto md:h-full">
-
           <div>
             <img 
               src={pdp} 
-              alt="Heritina" 
+              alt="RANDRIANJAFY Heritina, développeur web full stack"
               className="h-48 w-48 md:h-96 md:w-96 rounded-full object-cover" 
             />
           </div>
@@ -51,11 +71,8 @@ export default function Home() {
           <div className="text-2xl md:text-4xl text-center">
             <h1>RANDRIANJAFY Heritina</h1>
           </div>
-
         </div>
-
       </div>
     </div>
   );
 }
-

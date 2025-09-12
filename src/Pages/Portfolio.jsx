@@ -1,4 +1,5 @@
 // src/components/Services.js
+import { Helmet } from "react-helmet-async";
 import portfolio from "../Assets/icone/portfolio.png";
 import vitrineImage from '../Assets/bg.png'; 
 export default function Portfolio() {
@@ -31,6 +32,20 @@ export default function Portfolio() {
 
   return (
     <div className="w-full py-5 bg-gray-100">
+      <Helmet>
+        <title>Portfolio | RANDRIANJAFY Heritina</title>
+        <meta
+          name="description"
+          content="Découvrez mes projets web réalisés avec React, Django et TailwindCSS. Portfolio de RTH, développeur freelance à Madagascar."
+        />
+        <meta property="og:title" content="Portfolio - RTH" />
+        <meta
+          property="og:description"
+          content="Mes réalisations et projets web personnels et professionnels."
+        />
+        <meta property="og:image" content="https://rtheritina.netlify.app/assets/portfolio.jpg" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="text-center lg:w-[60%] w-[85%] bg-green-500 lg:ml-32 ml-8 mb-5 rounded-r-full flex-row flex justify-center items-center">
           <img
               src={portfolio}

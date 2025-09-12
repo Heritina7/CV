@@ -10,6 +10,7 @@ const NavLinks = [
   { nom: 'PORTFOLIO', icon: <FaProjectDiagram />, lien: '#portfolio' },
   { nom: 'PROJET', icon: <FaProjectDiagram />, lien: '#projet' },
   { nom: 'PROPOS', icon: <FaInfoCircle />, lien: '#propos' },
+  { nom: 'CV', icon: <FaInfoCircle />, lien: '#propos' },
   { nom: 'CONTACT', icon: <FaEnvelope />, lien: '#contact' }
 ];
 
