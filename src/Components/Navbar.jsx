@@ -74,7 +74,7 @@ export default function Navbar() {
 
           {/* Liens */}
           <div className={`flex flex-col lg:flex-row lg:p-2 transition-all duration-300 ${open ? 'block' : 'hidden lg:flex'}`}>
-            {NavLinks.map(({ icon, nom, lien, externe }) => (
+            {NavLinks.map(({ nom, lien, externe }) => (
               <a
                 key={nom}
                 href={lien}
@@ -88,7 +88,7 @@ export default function Navbar() {
                   active === nom ? 'bg-green-600 text-white rounded-lg' : 'text-black'
                 }`}
               >
-                {icon} <span className="ml-1 text-lg">{nom}</span>
+               <span className="ml-1 text-lg">{nom}</span>
               </a>
             ))}
           </div>

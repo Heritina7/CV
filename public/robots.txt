@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Lien vers le sitemap
-Sitemap: https://rtheritina.netlify.app/sitemap.xml
+Sitemap: https://rheritina.netlify.app/sitemap.xml
