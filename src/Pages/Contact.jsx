@@ -54,7 +54,7 @@ export default function Contact() {
       </Helmet>
       <div className="w-full max-w-7xl mx-auto border border-green-600 rounded-xl p-8">
         {/* Titre */}
-        <div className="text-center w-[80%] md:w-[60%] bg-green-500 mx-auto mb-10 rounded-xl">
+        <div className="text-center w-[80%] md:w-[60%] bg-[#2DD298] mx-auto mb-10 rounded-xl">
           <h2 className="text-3xl md:text-4xl p-3 font-bold text-gray-800">
             Mes <span className="text-white">CONTACTS</span>
           </h2>

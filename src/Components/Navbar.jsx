@@ -84,8 +84,8 @@ export default function Navbar() {
                   if (!externe) setActive(nom);
                   if (window.innerWidth < 1024) setOpen(false);
                 }}
-                className={`flex items-center justify-center p-2 ml-2 text-center duration-200 hover:text-white hover:bg-green-500 hover:rounded-lg ${
-                  active === nom ? 'bg-green-600 text-white rounded-lg' : 'text-black'
+                className={`flex items-center justify-center p-2 ml-2 text-center duration-200 hover:text-white hover:bg-[#2DD298] hover:bg-opacity-60 hover:rounded-lg ${
+                  active === nom ? 'bg-[#2DD298] text-white rounded-lg' : 'text-black'
                 }`}
               >
                <span className="ml-1 text-lg">{nom}</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
       </div>
 
       {/* Icônes flottantes */}
-      <div className="fixed bottom-5 right-5 bg-gray-200 p-2 rounded-full flex flex-col gap-2 shadow-lg z-50">
+      <div className="fixed bottom-5 right-5 bg-gray-200 p-2 rounded-full hover:border-[#2DD298] hover:border-2 duration-700 transition-all flex flex-col gap-2 shadow-lg z-50">
         <a href="https://facebook.com" target="_blank" rel="noreferrer" className="bg-blue-900/50 rounded-full p-2 text-white hover:bg-blue-500 hover:scale-110 transition-transform duration-200">
           <FaFacebookF />
         </a>

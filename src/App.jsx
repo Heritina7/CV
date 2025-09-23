@@ -27,7 +27,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="services" className="py-20 border-t border-gray-300">
+        <section id="services" className="py-20 border-t bg-gray-100 border-gray-300">
           <Services />
         </section>
 
@@ -35,15 +35,15 @@ export default function App() {
           <Portfolio />
         </section>
 
-        <section id="projet" className="py-20 border-t border-gray-300">
+        <section id="projet" className="py-20 border-t bg-gray-100">
           <Projet />
         </section>
 
-        <section id="propos" className="py-20 border-t border-gray-300">
+        <section id="propos" className="py-20 border-t">
           <Propos />
         </section>
 
-        <section id="contact" className="py-20 border-t border-gray-300">
+        <section id="contact" className="py-20 border-t bg-gray-100">
           <Contact />
         </section>
 

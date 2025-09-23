@@ -30,7 +30,7 @@ export default function Home() {
 
       <div className="flex flex-col md:flex-row max-h-screen">
         {/* Partie gauche */}
-        <div className="w-full md:w-1/2 h-auto md:h-screen text-lg font-semibold justify-center md:justify-end space-y-6 md:space-y-7 items-center flex flex-col p-6">
+        <div className="w-full md:w-1/2 h-auto md:h-screen text-lg font-semibold justify-center pt-28 space-y-6 md:space-y-7 items-center flex flex-col p-6">
 
           <div className="p-4 md:p-5 shadow-[0_4px_15px_rgba(0,0,0,0.4)] rounded-full text-center">
             <h1>Bonjour et Bienvenue</h1>
@@ -42,9 +42,12 @@ export default function Home() {
               <span className="text-green-400">Développeur Web Full Stack React | Django</span>
             </h1>
           </div>
+          <div className="p-4 md:p-5 shadow-[0_4px_15px_rgba(0,0,0,0.4)] rounded-full text-center">
+            <h1>Bonjour et Bienvenue</h1>
+          </div>
 
-          <div className="bg-white shadow-[0_4px_15px_rgba(0,0,0,0.4)] md:p-5 rounded-full overflow-hidden w-full flex justify-center items-center">
-            <div className="flex space-x-10 text-6xl md:text-4xl animate-slide">
+          <div className="bg-white shadow-[0_4px_15px_rgba(0,0,0,0.4)] md:p-5 rounded-full overflow-hidden w-56 top-60 p-5 lg:w-full relative lg:top-32 flex justify-center items-center">
+            <div className="flex space-x-10 text-3xl md:text-4xl animate-slide">
               <FaHtml5 className="text-orange-500" />
               <FaReact className="text-blue-400" />
               <SiDjango className="text-green-700" />
@@ -59,15 +62,14 @@ export default function Home() {
         </div>
 
         {/* Partie droite */}
-        <div className="w-full md:w-1/2 pt-10 md:pt-28 flex flex-col space-y-6 md:space-y-10 items-center h-auto md:h-full">
-          <div>
-            <img 
-              src={pdp} 
+        <div className="flex flex-col py-32 space-y-10 ">
+        <div className="flex items-center justify-center">
+            <img
+              src={pdp}
               alt="RANDRIANJAFY Heritina, développeur web full stack"
-              className="h-48 w-48 md:h-96 md:w-96 rounded-full object-cover" 
+              className="h-48 w-48 lg:bottom-0 relative bottom-48 lg:w-[550px] lg:h-[550px] rounded-full"
             />
-          </div>
-
+            </div>
           <div className="text-2xl md:text-4xl text-center">
             <h1>RANDRIANJAFY Heritina</h1>
           </div>
