@@ -22,8 +22,13 @@ export default function Portfolio() {
   const services = [
     {
       title: "Site Vitrine",
-      description: "Un site vitrine moderne et responsive pour présenter vos services.",
-      features: ["Design moderne", "Responsive (PC, mobile, tablette)", "Pages : Accueil, Services, Contact"],
+      description:
+        "Un site vitrine moderne et responsive pour présenter vos services.",
+      features: [
+        "Design moderne",
+        "Responsive (PC, mobile, tablette)",
+        "Pages : Accueil, Services, Contact",
+      ],
       image: vitrineImage,
       imagehover: hover,
       categorie: "VITRINE",
@@ -31,7 +36,11 @@ export default function Portfolio() {
     {
       title: "Site Catalogue",
       description: "Un catalogue en ligne avec gestion des produits.",
-      features: ["Ajout / modification de produits", "Recherche & filtres", "Interface admin simple"],
+      features: [
+        "Ajout / modification de produits",
+        "Recherche & filtres",
+        "Interface admin simple",
+      ],
       image: vitrineImage,
       imagehover: hover,
       categorie: "CATALOGUE",
@@ -70,7 +79,6 @@ export default function Portfolio() {
 
   return (
     <div className="w-full py-5">
-
       {/* HEADER */}
       <div className="text-center lg:w-[50%] w-[85%] bg-[#2DD298] lg:ml-32 ml-8 mb-5 rounded-r-full flex-row flex justify-center items-center">
         <img
@@ -84,77 +92,92 @@ export default function Portfolio() {
       </div>
 
       {/* Mobile menu button */}
-<div className="lg:hidden flex items-center mb-5 justify-center">
-  <button
-    onClick={() => setOpen(!open)}
-    className="p-2 rounded-full bg-white border border-[#2DD298] animate-pulseShadow"
-  >
-    <img
-      src={portfolio}
-      alt="Icône portfolio"
-      className="w-8 h-8 object-cover"
-    />
-  </button>
-</div>
+      <div className="lg:hidden flex items-center mb-5 justify-center">
+        <button
+          onClick={() => setOpen(!open)}
+          className="p-2 rounded-full bg-white border border-[#2DD298] animate-pulseShadow"
+        >
+          <img
+            src={portfolio}
+            alt="Icône portfolio"
+            className="w-8 h-8 object-cover"
+          />
+        </button>
+      </div>
 
+      {/* Mobile dropdown */}
+      {open && (
+        <div className="lg:hidden flex flex-col gap-2 bg-[#6F54D4] text-white p-4 rounded-xl mx-8 mb-5">
+          {NavLinks.map(({ nom }) => (
+            <button
+              key={nom}
+              onClick={() => {
+                setActive(nom);
+                setOpen(false); // ✅ fermer après clic
+              }}
+              className={`px-4 py-2 rounded-md text-left ${
+                active === nom
+                  ? "bg-[#2DD298] text-white"
+                  : "hover:bg-[#2DD298] hover:text-white"
+              }`}
+            >
+              {nom}
+            </button>
+          ))}
+        </div>
+      )}
 
-{/* Mobile dropdown */}
-{open && (
-  <div className="lg:hidden flex flex-col gap-2 bg-[#6F54D4] text-white p-4 rounded-xl mx-8 mb-5">
-    {NavLinks.map(({ nom }) => (
-      <button
-        key={nom}
-        onClick={() => {
-          setActive(nom);
-          setOpen(false); // ✅ fermer après clic
-        }}
-        className={`px-4 py-2 rounded-md text-left ${
-          active === nom
-            ? "bg-[#2DD298] text-white"
-            : "hover:bg-[#2DD298] hover:text-white"
-        }`}
-      >
-        {nom}
-      </button>
-    ))}
-  </div>
-)}
+      {/* MENU DESKTOP */}
+      <div className="hidden lg:flex justify-center gap-4 mb-8">
+        {NavLinks.map(({ nom }) => (
+          <button
+            key={nom}
+            onClick={() => setActive(nom)}
+            className={`px-4 py-2 rounded-full font-medium transition ${
+              active === nom
+                ? "bg-[#2DD298] text-white"
+                : "bg-gray-100 text-gray-700 hover:bg-[#2DD298] hover:text-white"
+            }`}
+          >
+            {nom}
+          </button>
+        ))}
+      </div>
 
       {/* CARTES */}
-<div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-  {filteredServices.map((service, index) => (
-    <div
-      key={index}
-      className="relative bg-white rounded-2xl shadow-lg overflow-hidden group h-64 flex items-center justify-center"
-    >
-      {/* Image par défaut */}
-      <img
-        src={service.image}
-        alt={service.title}
-        className="w-full h-full object-cover transition duration-500 group-hover:opacity-0"
-      />
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {filteredServices.map((service, index) => (
+          <div
+            key={index}
+            className="relative bg-white rounded-2xl shadow-lg overflow-hidden group h-64 flex items-center justify-center"
+          >
+            {/* Image par défaut */}
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-full object-cover transition duration-500 group-hover:opacity-0"
+            />
 
-      {/* Image hover qui prend tout */}
-      <img
-        src={service.imagehover}
-        alt={service.title}
-        className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-500"
-      />
+            {/* Image hover */}
+            <img
+              src={service.imagehover}
+              alt={service.title}
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-500"
+            />
 
-      {/* Texte overlay au-dessus de l'image hover */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-500">
-        <h3 className="text-white text-xl font-bold text-center px-2">
-          {service.title}
-        </h3>
-        <p className="text-white text-sm mt-2 text-center px-3">
-          {service.description}
-        </p>
+            {/* Texte overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-500">
+              <h3 className="text-white text-xl font-bold text-center px-2">
+                {service.title}
+              </h3>
+              <p className="text-white text-sm mt-2 text-center px-3">
+                {service.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-  ))} 
-</div>
-
-      </div>
   );
 }
 
