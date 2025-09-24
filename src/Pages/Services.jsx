@@ -100,14 +100,6 @@ export default function Services() {
 
   return (
     <div className="w-full py-5">
-      <Helmet>
-        <title>Services | Portfolio RANDRIANJAFY Heritina</title>
-        <meta
-          name="description"
-          content="Découvrez les services proposés par RTH : sites web, applications, e-commerce et solutions personnalisées."
-        />
-      </Helmet>
-
       {/* Header */}
       <div className="text-center lg:w-[40%] w-[85%] bg-[#2DD298] lg:ml-32 ml-8 mb-5 rounded-r-full flex-row flex justify-center items-center">
         <img

@@ -1,5 +1,4 @@
 // src/components/Services.js
-import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import portfolio from "../Assets/icone/portfolio.png";
 import vitrineImage from "../Assets/bg.png";
@@ -71,13 +70,6 @@ export default function Portfolio() {
 
   return (
     <div className="w-full py-5">
-      <Helmet>
-        <title>RTH | RANDRIANJAFY Heritina</title>
-        <meta
-          name="description"
-          content="Découvrez mes projets web réalisés avec React, Django et TailwindCSS. Portfolio de RTH, développeur freelance à Madagascar."
-        />
-      </Helmet>
 
       {/* HEADER */}
       <div className="text-center lg:w-[50%] w-[85%] bg-[#2DD298] lg:ml-32 ml-8 mb-5 rounded-r-full flex-row flex justify-center items-center">

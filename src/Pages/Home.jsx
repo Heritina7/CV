@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { FaHtml5, FaReact } from "react-icons/fa";
 import { 
   SiDjango, 
@@ -13,21 +12,6 @@ import pdp from '../Assets/pdp.jpg';
 export default function Home() {
   return (
     <div className="w-full h-full">
-     <Helmet>
-        <title>Accueil | Portfolio RANDRIANJAFY Heritina</title>
-        <meta
-          name="description"
-          content="Développeur Web Full Stack freelance spécialisé en React et Django. Découvrez mon portfolio et mes projets."
-        />
-        <meta property="og:title" content="Portfolio RANDRIANJAFY Heritina" />
-        <meta
-          property="og:description"
-          content="Je développe des sites modernes et performants avec React & Django."
-        />
-        <meta property="og:image" content="https://rtheritina.netlify.app/assets/pdp.jpg" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-
       <div className="flex flex-col md:flex-row max-h-screen">
         {/* Partie gauche */}
         <div className="w-full md:w-1/2 h-auto md:h-screen text-lg font-semibold justify-center pt-28 space-y-6 md:space-y-7 items-center flex flex-col p-6">

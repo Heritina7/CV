@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { BsTelephone, BsEnvelope, BsPerson, BsGeoAlt } from "react-icons/bs";
 
 export default function Contact() {
@@ -38,20 +37,6 @@ export default function Contact() {
 
   return (
     <div className="w-full py-10 bg-gray-100">
-      <Helmet>
-        <title>Contact | RANDRIANJAFY Heritina</title>
-        <meta
-          name="description"
-          content="Contactez RTH pour vos projets web. Développeur full stack spécialisé en React & Django."
-        />
-        <meta property="og:title" content="Contact - RTH" />
-        <meta
-          property="og:description"
-          content="Envoyez un message ou contactez-moi directement par téléphone ou email."
-        />
-        <meta property="og:image" content="https://rtheritina.netlify.app/assets/contact.jpg" />
-        <meta property="og:type" content="website" />
-      </Helmet>
       <div className="w-full max-w-7xl mx-auto border border-green-600 rounded-xl p-8">
         {/* Titre */}
         <div className="text-center w-[80%] md:w-[60%] bg-[#2DD298] mx-auto mb-10 rounded-xl">

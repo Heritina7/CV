@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import projet from "../Assets/icone/projet.png";
 import vitrineImage from '../Assets/bg.png'; 
 
@@ -23,21 +22,6 @@ export default function Projet() {
 
   return (
     <div className="w-full py-5 bg-gray-100">
-      <Helmet>
-        <title>Projets | RANDRIANJAFY Heritina</title>
-        <meta
-          name="description"
-          content="Présentation des projets en cours et terminés de RTH, développeur web full stack freelance."
-        />
-        <meta property="og:title" content="Projets - RTH" />
-        <meta
-          property="og:description"
-          content="Découvrez les projets web et applications développés par RTH."
-        />
-        <meta property="og:image" content="https://rtheritina.netlify.app/assets/projets.jpg" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-
       {/* HEADER */}
       <div className="text-center lg:w-[60%] w-[70%] bg-[#2DD298] ml-10 md:ml-32 mb-5 flex flex-row justify-center items-center rounded-r-full">
         <img

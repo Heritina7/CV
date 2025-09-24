@@ -77,20 +77,6 @@ export default function Propos() {
 
   return (
     <div className="w-full py-5">
-      <Helmet>
-        <title>À propos | RANDRIANJAFY Heritina</title>
-        <meta
-          name="description"
-          content="En savoir plus sur RTH, développeur web full stack freelance, ses compétences, sa motivation et ses réalisations."
-        />
-        <meta property="og:title" content="À propos - RTH" />
-        <meta
-          property="og:description"
-          content="Découvrez mon parcours, mes compétences et ma motivation pour vos projets web."
-        />
-        <meta property="og:image" content="https://rtheritina.netlify.app/assets/propos.jpg" />
-        <meta property="og:type" content="website" />
-      </Helmet>
       <div className="text-center w-[80%] bg-[#2DD298] lg:ml-32 ml-8 mb-5 rounded-r-full">
         <h2 className="text-3xl md:text-4xl p-2 font-bold text-gray-800">
           Mes <span className="text-white">PROPOS</span>
