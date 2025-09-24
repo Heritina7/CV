@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { BsCart4 } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import serviceIcon from "../Assets/icone/service.png";
